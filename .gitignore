@@ -9,3 +9,5 @@ output/
 outputs/
 *.log        # 忽略所有 .log 文件
 log/         # 忽略 log 目录
+# 数据集
+data/
