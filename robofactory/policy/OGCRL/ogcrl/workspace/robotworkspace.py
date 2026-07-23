@@ -54,6 +54,11 @@ class RobotWorkspace(BaseWorkspace):
         save_name = pathlib.Path(self.cfg.task.dataset.zarr_path).stem
         cfg.save_dir = os.path.join(cfg.save_dir, 'MANGOBench', cfg.agent.agent_name, save_name)
         os.makedirs(cfg.save_dir, exist_ok=True)
+
+        # 保存归一化器为 pkl 文件
+        action_normalizer = getattr(dataset, "action_normalizer", None)
+        if action_normalizer is not None:
+            action_normalizer.save(os.path.join(cfg.save_dir, "action_normalizer.pkl"))
         del dataset
 
         val_dataset = None

@@ -23,6 +23,9 @@ import gymnasium as gym
 import numpy as np
 import sapien
 
+# 归一化器引入
+from ogcrl.utils.action_normalizer import ActionNormalizer
+
 from mani_skill.envs.sapien_env import BaseEnv
 from mani_skill.utils import gym_utils
 from robofactory.utils.wrappers.record import RecordEpisodeMA
@@ -211,6 +214,22 @@ def main(args: Args):
     # Load multi gc policy
     agent_num = planner.agent_num
     goals = []  # multi-agent goals
+    # 归一化器
+    normalizers = [None for _ in range(agent_num)]
+    if args.restore_path is not None:
+        for i in range(agent_num):
+            candidates = [
+                os.path.join(args.restore_path, f"{args.task_name}_Agent{i}_{args.data_num}", "action_normalizer.pkl"),
+                os.path.join(args.restore_path, f"Agent{i}_action_normalizer.pkl"),
+                os.path.join(args.restore_path, "action_normalizer.pkl"),
+            ]
+            for p in candidates:
+                if os.path.isfile(p):
+                    try:
+                        normalizers[i] = ActionNormalizer.load(p)
+                        break
+                    except Exception:
+                        normalizers[i] = None
 
     # Load temporal subgoals for all agents
     for i in range(agent_num):
@@ -301,7 +320,10 @@ def main(args: Args):
                 now_action = actor_fns[id](observations=observations[id]["agent_pos"], goals=example_goals[goal_index][id]["state"], temperature=args.eval_temperature)
             elif args.observation=="visual":
                 now_action = actor_fns[id](observations=observations[id]["head_cam"], goals=example_goals[goal_index][id]["head_camera"], temperature=args.eval_temperature)
-
+            # 添加归一化器反归一化操作
+            now_action = np.asarray(now_action)
+            if normalizers[id] is not None:
+                now_action = normalizers[id].unnormalize(now_action)
             raw_obs = env.get_obs()
 
             # Current joint positions (excluding finger joints at the end)

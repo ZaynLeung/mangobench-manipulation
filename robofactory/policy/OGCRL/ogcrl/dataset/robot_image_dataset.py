@@ -8,7 +8,7 @@ from ogcrl.common.replay_buffer import ReplayBuffer
 from ogcrl.common.sampler import (
     SequenceSampler, get_val_mask, downsample_mask)
 from ogcrl.dataset.base_dataset import BaseImageDataset
-
+from ogcrl.utils.action_normalizer import ActionNormalizer
 class RobotImageDataset(BaseImageDataset):
     def __init__(self,
                  zarr_path, 
@@ -18,7 +18,8 @@ class RobotImageDataset(BaseImageDataset):
                  seed=42,
                  val_ratio=0.0,
                  batch_size=64,
-                 max_train_episodes=None):
+                 max_train_episodes=None,
+                 normalize_actions=False):
         """
         Initialize the dataset object, configure sampler, data buffers, etc.
 
@@ -37,6 +38,18 @@ class RobotImageDataset(BaseImageDataset):
             zarr_path,
             keys=['head_camera', 'state', 'action']
         )
+        # 添加归一化器
+        self.action_normalizer = None
+        if normalize_actions:
+            normalizer = ActionNormalizer().fit(self.replay_buffer["action"])
+            norm_actions = normalizer.normalize(self.replay_buffer["action"]).astype(np.float32)
+
+            if isinstance(self.replay_buffer.root, dict):
+                self.replay_buffer.root["data"]["action"] = norm_actions
+            else:
+                self.replay_buffer.root["data"]["action"][:] = norm_actions
+
+            self.action_normalizer = normalizer
             
         val_mask = get_val_mask(
             n_episodes=self.replay_buffer.n_episodes, 
