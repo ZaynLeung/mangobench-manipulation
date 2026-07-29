@@ -38,6 +38,43 @@ class RobotWorkspace(BaseWorkspace):
     def run(self):
         cfg = copy.deepcopy(self.cfg)
 
+        dataset_path = str(getattr(cfg.task.dataset, "zarr_path", "") or "")
+        if not dataset_path:
+            raise ValueError("[ERROR] Training data path is not configured. Please set task.dataset.zarr_path.")
+        dataset_path = os.path.expanduser(dataset_path)
+        if not os.path.isabs(dataset_path):
+            dataset_path = os.path.abspath(dataset_path)
+            print(f"[WARN] Data path is not absolute; resolved to {dataset_path}")
+        if not os.path.exists(dataset_path):
+            raise FileNotFoundError(f"[ERROR] Training data path does not exist: {dataset_path}")
+        cfg.task.dataset.zarr_path = dataset_path
+        print(f"[INFO] Using training data: {cfg.task.dataset.zarr_path}")
+
+        save_dir = str(getattr(cfg, "save_dir", "") or "")
+        if not save_dir:
+            save_dir = "/media/data01/wangyi/liangziyan/mangobench_manipulation/logs/debug_ogcrl"
+            print(f"[WARN] save_dir is not configured; using default output path: {save_dir}")
+        save_dir = os.path.expanduser(save_dir)
+        if not os.path.isabs(save_dir):
+            save_dir = os.path.abspath(save_dir)
+            print(f"[WARN] save_dir is not absolute; resolved to {save_dir}")
+        cfg.save_dir = save_dir
+        os.makedirs(cfg.save_dir, exist_ok=True)
+        print(f"[INFO] Training output dir: {cfg.save_dir}")
+
+        if cfg.save_goal:
+            save_goal_path = str(getattr(cfg, "save_goal_path", "") or "")
+            if not save_goal_path:
+                save_goal_path = os.path.join(cfg.save_dir, "debug_goals.pkl")
+                print(f"[WARN] save_goal_path is not configured; using default goal file path: {save_goal_path}")
+            save_goal_path = os.path.expanduser(save_goal_path)
+            if not os.path.isabs(save_goal_path):
+                save_goal_path = os.path.abspath(save_goal_path)
+                print(f"[WARN] save_goal_path is not absolute; resolved to {save_goal_path}")
+            cfg.save_goal_path = save_goal_path
+            os.makedirs(os.path.dirname(cfg.save_goal_path), exist_ok=True)
+            print(f"[INFO] Goal file path: {cfg.save_goal_path}")
+
         # Configure dataset
         dataset: BaseImageDataset
         dataset = hydra.utils.instantiate(cfg.task.dataset)

@@ -6,7 +6,27 @@
 暂时不需要debug
 
 # OGCRL debug
+## 各项路径、实验数据路径和保存路径
+### 代码本体路径
+即代码存放的位置
+/home/wangyi/Liangziyan/RoboFactory/robofactory/policy/OGCRL
 
+### 实验数据路径
+训练数据目录：/media/disk/wangyi/RoboFactory/robofactory/data/
+其中包含：
+h5_data
+pkl_data
+zarr_data
+
+调试使用的数据文件：
+/media/disk/wangyi/RoboFactory/robofactory/data/zarr_data/LiftBarrier-rf_Agent0_150.zarr
+/media/disk/wangyi/RoboFactory/robofactory/data/zarr_data/LiftBarrier-rf_Agent1_150.zarr
+
+### 日志及输出保存路径
+输出目录：/media/data01/wangyi/liangziyan/mangobench_manipulation/logs/debug_ogcrl
+目标文件保存路径：/media/data01/wangyi/liangziyan/mangobench_manipulation/logs/debug_ogcrl/debug_goals.pkl
+
+若输出目录不存在，脚本会自动创建并提示。
 ## 用于测试的简化算法文件
 只通过添加一个算法文件来进行debug，即类比OCGRL的hiql.py文件，添加一个debugalgor.py文件。输入接口和输出接口保持一致，但内部网络简化。调用OGCRL文件夹中的其他功能组件测试。
 ## 缩短时间debug的实验配置
