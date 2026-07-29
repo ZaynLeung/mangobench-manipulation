@@ -1,3 +1,9 @@
+# 增改内容
+## 归一化器
+
+
+
+
 # MangoBench: A Benchmark for Multi-Agent Goal-Conditioned Offline Reinforcement Learning
 
 Official implementation of **MangoBench** (CVPR 2026).

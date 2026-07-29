@@ -1,0 +1,20 @@
+## 动作空间和关节数量
+
+### 每个 Panda 机械臂
+
+- __7 个手臂关节__（用于运动规划，`joint_vel_limits=np.ones(7)`）
+- __1 个夹爪控制维度__（开/合）
+- __总动作维度 = 8__（`action = np.hstack([qpos, gripper_state])`，见 `motionplanner.py`）
+
+### 典型双臂任务（如 LiftBarrier-rf）
+
+- 2 个 Panda → 每个 agent 的动作维度 = __8__
+- 按 agent 分别训练，各自 zarr 文件中的 action shape = `(N, 8)`
+
+### 关节上下限的来源
+
+关节限位定义在 __Panda 的 URDF 文&#x4EF6;__&#x4E2D;（属于 ManiSkill/mani_skill 包的资产文件），路径为 `self.env_agent[id].urdf_path`。运行时由 mplib 的 pinocchio 模型解析：
+
+```python
+self.joint_limits = np.concatenate(self.pinocchio_model.get_joint_limits())
+```

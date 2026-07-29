@@ -110,7 +110,7 @@ mangobench-manipulation/
 ## 关键概念
 
 ### 多智能体训练模式
-- 每个 agent 独立训练各自的策略（CTDE: 集中训练、分散执行）
+- 每个 agent 独立训练各自的策略
 - 数据按 agent 分割：`TaskName_Agent0_150.zarr`, `TaskName_Agent1_150.zarr`
 - `MultiAgentManager` 管理多个独立的 JAX agent 实例
 - 评估时多个 agent 联合推理
