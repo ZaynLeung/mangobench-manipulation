@@ -10,7 +10,7 @@ agents = dict(
     gcbc=GCBCAgent,
     gciql=GCIQLAgent,
     gcivl=GCIVLAgent,
-    debug=DebugAgent,
+    debugalgor=DebugAgent,
     hiql=HIQLAgent,
    
 )
