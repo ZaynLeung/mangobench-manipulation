@@ -6,7 +6,7 @@ DATA_ZARR="/media/disk/wangyi/RoboFactory/robofactory/data/zarr_data/LiftBarrier
 OUTPUT_DIR="/media/data01/wangyi/liangziyan/mangobench_manipulation/logs/debug_ogcrl"
 GOAL_PATH="${OUTPUT_DIR}/debug_goals.pkl"
 
-if [ ! -f "$DATA_ZARR" ]; then
+if [ ! -e "$DATA_ZARR" ]; then
   echo "[ERROR] Training data not found: $DATA_ZARR" >&2
   exit 1
 fi
