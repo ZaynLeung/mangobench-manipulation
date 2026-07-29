@@ -1,0 +1,26 @@
+configs 放的是任务和训练的配置文件，主要用 YAML 控制场景、数据路径、agent 和训练超参数。它不实现业务逻辑，但决定了代码运行时的具体参数组合。
+
+tasks 负责定义 ManiSkill 里的具体任务环境，比如搬运、堆叠、传递和拍照等。这里是任务行为和环境状态机的核心实现层。
+
+planner 是运动规划和演示数据采集相关代码，负责把任务跑成可用的轨迹数据。它更偏向生成数据，而不是训练策略。
+
+OGCRL 是主训练链路之一，面向 goal-conditioned 的多智能体强化学习。这里包含训练入口、workspace、agent、dataset 和评估脚本。
+
+Diffusion-Policy 是另一套策略训练实现，核心是扩散策略。它的训练方式更接近监督学习和行为克隆，用于和 OGCRL 做对比。
+
+script 放的是数据处理和运行辅助脚本，比如生成演示、格式转换和任务可视化。它主要服务于数据流水线和实验准备。
+
+utils 是底层通用工具层，包含环境封装、场景构建、URDF 加载和记录包装器等。上层任务和规划代码会大量复用这里的组件。
+
+agent_work_history 用来保存这次以及后续的工作记录和代码关系说明。它相当于项目内的操作备忘录，方便回看主逻辑和修改脉络。
+
+命令行启动各参数的意义
+在 OGCRL 里，入口先读的是 robot_gc.yaml，它默认又会组合 default_task.yaml 和 agent 配置。你这条命令里的 task.dataset.zarr_path=data/zarr_data/LiftBarrier-rf_Agent0_150.zarr 确实是在覆写数据来源，
+训练时实际读的就是这个 zarr 文件；而 task.name=LiftBarrier-rf 主要是覆写任务名称，用来参与命名、输出目录和日志路径，具体训练数据还是由这个 zarr 决定。
+更准确地说，这条命令覆写了这些东西：
+数据路径：task.dataset.zarr_path
+任务名：task.name
+训练参数：training.debug、training.seed、training.device、train_steps、log_interval、save_interval
+agent 配置：agent=hiql 以及 agent.high_alpha、agent.low_alpha、agent.batch_size、agent.encoder、agent.low_actor_rep_grad、agent.p_aug、agent.subgoal_steps
+运行相关：exp_name、logging.mode、env_name、save_dir、save_goal、save_goal_path
+所以你的理解大方向是对的，但更严格一点说，它不仅覆写了数据和任务，还覆写了 agent、训练轮次和保存行为。训练逻辑里真正加载数据的位置在 robotworkspace.py，它会直接按 cfg.task.dataset 去实例化数据集。
