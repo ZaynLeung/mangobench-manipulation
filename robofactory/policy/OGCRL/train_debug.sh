@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+export JAX_PLATFORMS=cuda
 ROOT_DIR="/home/wangyi/Liangziyan/mangobench-manipulation/robofactory"
 DATA_ZARR="/media/disk/wangyi/RoboFactory/robofactory/data/zarr_data/LiftBarrier-rf_Agent0_150.zarr"
 OUTPUT_DIR="/media/data01/wangyi/liangziyan/mangobench_manipulation/logs/debug_ogcrl"
