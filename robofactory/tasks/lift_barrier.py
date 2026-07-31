@@ -33,7 +33,7 @@ class LiftBarrierEnv(BaseEnv):
     cube_color = np.concatenate((np.array([187, 116, 175]) / 255, [1]))
     light_cube_color = np.concatenate((np.array([187, 116, 175]) / 255, [0.5]))
     cube_half_size = 0.02
-
+    eval_goal = None
     def __init__(
         self, *args, robot_uids=("panda", "panda",), robot_init_qpos_noise=0.02, **kwargs
     ):
