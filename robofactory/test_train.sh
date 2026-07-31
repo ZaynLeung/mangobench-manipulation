@@ -2,9 +2,10 @@
 set -euo pipefail
 
 ROOT_DIR="/home/wangyi/Liangziyan/mangobench-manipulation/robofactory"
-DATA_ZARR="/media/disk/wangyi/RoboFactory/robofactory/data/zarr_data/LiftBarrier-rf_Agent0_150.zarr"
+DATA_ZARR="/media/disk/wangyi/RoboFactory/robofactory/data/zarr_data/"
+# 用于后续拼接各个智能体的数据集路径
 OUTPUT_DIR="/media/data01/wangyi/liangziyan/mangobench_manipulation/logs/IHIQL_LiftBarrier"
-GOAL_PATH="${OUTPUT_DIR}/debug_goals.pkl"
+GOAL_PATH="${OUTPUT_DIR}/LiftBarrier_goals.pkl"
 
 if [ ! -e "$DATA_ZARR" ]; then
   echo "[ERROR] Training data not found: $DATA_ZARR" >&2
@@ -20,9 +21,9 @@ cd "$ROOT_DIR"
 
 #IHIQL LiftBarrier train and eval
 python policy/OGCRL/train.py \
-    --config-name=robot_gc.yaml \
+    --config-name=robot_gc_test_train.yaml \
     task.name=LiftBarrier-rf \
-    task.dataset.zarr_path=data/zarr_data/LiftBarrier-rf_Agent0_150.zarr \
+    task.dataset.zarr_path="${DATA_ZARR}LiftBarrier-rf_Agent0_150.zarr" \
     training.debug=False \
     training.seed=100 \
     training.device=cuda:0 \
@@ -44,9 +45,9 @@ python policy/OGCRL/train.py \
     save_dir=expacp 
 
 python policy/OGCRL/train.py \
-    --config-name=robot_gc.yaml \
+    --config-name=robot_gc_test_train.yaml \
     task.name=LiftBarrier-rf \
-    task.dataset.zarr_path=data/zarr_data/LiftBarrier-rf_Agent1_150.zarr \
+    task.dataset.zarr_path="${DATA_ZARR}LiftBarrier-rf_Agent1_150.zarr" \
     training.debug=False \
     training.seed=100 \
     training.device=cuda:0 \
