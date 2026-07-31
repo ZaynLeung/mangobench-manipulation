@@ -42,7 +42,9 @@ python policy/OGCRL/train.py \
     agent.p_aug=0.5 \
     agent.subgoal_steps=10 \
     observation=visual \
-    save_dir=expacp 
+    save_dir=expacp \
+    save_goal=True \
+    save_goal_path="$GOAL_PATH"
 
 python policy/OGCRL/train.py \
     --config-name=robot_gc_test_train.yaml \
@@ -66,6 +68,13 @@ python policy/OGCRL/train.py \
     agent.p_aug=0.5 \
     agent.subgoal_steps=10 \
     observation=visual \
-    save_dir=expacp 
+    save_dir=expacp \
+    save_goal=True \
+    save_goal_path="$GOAL_PATH"
 
 bash ./policy/OGCRL/eval_multi.sh configs/table/lift_barrier.yaml 150  1 LiftBarrier-rf policy/OGCRL/ogcrl/config/agent/hiql.yaml expacp/MANGOBench/hiql 15000 policy/OGCRL/ogcrl/goal/ visual 3.0 3.0  impala_small True 0.5 10 None hiql
+
+cd ..
+cd ..
+python run.py --size 16 --gpu 6
+# nohup bash run.sh > run.log 2>&1 &
