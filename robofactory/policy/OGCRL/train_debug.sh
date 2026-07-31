@@ -24,7 +24,7 @@ python policy/OGCRL/train.py \
   task.dataset.zarr_path="$DATA_ZARR" \
   training.debug=True \
   training.seed=100 \
-  training.device=cuda:0 \
+  training.device=cuda:6 \
   exp_name=DEBUG_OGCRL \
   logging.mode=offline \
   env_name=robofactory \
