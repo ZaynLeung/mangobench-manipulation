@@ -11,3 +11,5 @@ outputs/
 log/         # 忽略 log 目录
 # 数据集
 data/
+*.pkl
+*.h5

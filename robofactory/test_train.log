@@ -1,1 +1,2 @@
 nohup: ignoring input
+test_train.sh: line 196: 3279984 Killed                  python run.py --size 16 --gpu 5
