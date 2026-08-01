@@ -1697,3 +1697,408 @@ Traceback (most recent call last):
   File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 116, in load_goals
     with open(goal_dir, "rb") as f:
 FileNotFoundError: [Errno 2] No such file or directory: 'policy/OGCRL/ogcrl/goal/LiftBarrier-rf_Agent0_150_Temperal.pkl'
+PandaArm Control Mode: pd_joint_pos
+Seed 1078 done. Success Rate: 0%
+Running evaluation with seed 1079 for task configs/table/lift_barrier.yaml...
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+2026-08-02 00:28:50.783013: W external/xla/xla/service/gpu/nvptx_compiler.cc:765] The NVIDIA driver's CUDA version is 12.2 which is older than the ptxas CUDA version (12.9.86). Because the driver is older than the ptxas version, XLA is disabling parallel compilation, which may slow down compilation. You should update your NVIDIA driver or use the NVIDIA-provided CUDA forward compatibility packages.
+[33;1m2026-08-02 00:28:52,978 - mani_skill  - WARNING - No initial pose set for actor builder of barrier, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.max_episode_steps to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.max_episode_steps` for environment variables or `env.get_wrapper_attr('max_episode_steps')` that will search the reminding wrappers.[0m
+  logger.warn(
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.agent to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.agent` for environment variables or `env.get_wrapper_attr('agent')` that will search the reminding wrappers.[0m
+  logger.warn(
+[33;1m2026-08-02 00:28:53,480 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual0, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+[33;1m2026-08-02 00:28:53,480 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual1, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+Traceback (most recent call last):
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 407, in <module>
+    main(parsed_args)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 237, in main
+    goal = load_goals(goal_path)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 116, in load_goals
+    with open(goal_dir, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'policy/OGCRL/ogcrl/goal/LiftBarrier-rf_Agent0_150_Temperal.pkl'
+PandaArm Control Mode: pd_joint_pos
+Seed 1079 done. Success Rate: 0%
+Running evaluation with seed 1080 for task configs/table/lift_barrier.yaml...
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+2026-08-02 00:28:59.425546: W external/xla/xla/service/gpu/nvptx_compiler.cc:765] The NVIDIA driver's CUDA version is 12.2 which is older than the ptxas CUDA version (12.9.86). Because the driver is older than the ptxas version, XLA is disabling parallel compilation, which may slow down compilation. You should update your NVIDIA driver or use the NVIDIA-provided CUDA forward compatibility packages.
+[33;1m2026-08-02 00:29:01,644 - mani_skill  - WARNING - No initial pose set for actor builder of barrier, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.max_episode_steps to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.max_episode_steps` for environment variables or `env.get_wrapper_attr('max_episode_steps')` that will search the reminding wrappers.[0m
+  logger.warn(
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.agent to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.agent` for environment variables or `env.get_wrapper_attr('agent')` that will search the reminding wrappers.[0m
+  logger.warn(
+[33;1m2026-08-02 00:29:02,184 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual0, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+[33;1m2026-08-02 00:29:02,185 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual1, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+Traceback (most recent call last):
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 407, in <module>
+    main(parsed_args)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 237, in main
+    goal = load_goals(goal_path)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 116, in load_goals
+    with open(goal_dir, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'policy/OGCRL/ogcrl/goal/LiftBarrier-rf_Agent0_150_Temperal.pkl'
+PandaArm Control Mode: pd_joint_pos
+Seed 1080 done. Success Rate: 0%
+Running evaluation with seed 1081 for task configs/table/lift_barrier.yaml...
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+2026-08-02 00:29:08.197954: W external/xla/xla/service/gpu/nvptx_compiler.cc:765] The NVIDIA driver's CUDA version is 12.2 which is older than the ptxas CUDA version (12.9.86). Because the driver is older than the ptxas version, XLA is disabling parallel compilation, which may slow down compilation. You should update your NVIDIA driver or use the NVIDIA-provided CUDA forward compatibility packages.
+[33;1m2026-08-02 00:29:10,407 - mani_skill  - WARNING - No initial pose set for actor builder of barrier, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.max_episode_steps to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.max_episode_steps` for environment variables or `env.get_wrapper_attr('max_episode_steps')` that will search the reminding wrappers.[0m
+  logger.warn(
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.agent to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.agent` for environment variables or `env.get_wrapper_attr('agent')` that will search the reminding wrappers.[0m
+  logger.warn(
+[33;1m2026-08-02 00:29:10,919 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual0, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+[33;1m2026-08-02 00:29:10,919 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual1, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+Traceback (most recent call last):
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 407, in <module>
+    main(parsed_args)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 237, in main
+    goal = load_goals(goal_path)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 116, in load_goals
+    with open(goal_dir, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'policy/OGCRL/ogcrl/goal/LiftBarrier-rf_Agent0_150_Temperal.pkl'
+PandaArm Control Mode: pd_joint_pos
+Seed 1081 done. Success Rate: 0%
+Running evaluation with seed 1082 for task configs/table/lift_barrier.yaml...
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+2026-08-02 00:29:17.111633: W external/xla/xla/service/gpu/nvptx_compiler.cc:765] The NVIDIA driver's CUDA version is 12.2 which is older than the ptxas CUDA version (12.9.86). Because the driver is older than the ptxas version, XLA is disabling parallel compilation, which may slow down compilation. You should update your NVIDIA driver or use the NVIDIA-provided CUDA forward compatibility packages.
+[33;1m2026-08-02 00:29:19,243 - mani_skill  - WARNING - No initial pose set for actor builder of barrier, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.max_episode_steps to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.max_episode_steps` for environment variables or `env.get_wrapper_attr('max_episode_steps')` that will search the reminding wrappers.[0m
+  logger.warn(
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.agent to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.agent` for environment variables or `env.get_wrapper_attr('agent')` that will search the reminding wrappers.[0m
+  logger.warn(
+[33;1m2026-08-02 00:29:19,816 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual0, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+[33;1m2026-08-02 00:29:19,817 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual1, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+Traceback (most recent call last):
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 407, in <module>
+    main(parsed_args)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 237, in main
+    goal = load_goals(goal_path)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 116, in load_goals
+    with open(goal_dir, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'policy/OGCRL/ogcrl/goal/LiftBarrier-rf_Agent0_150_Temperal.pkl'
+PandaArm Control Mode: pd_joint_pos
+Seed 1082 done. Success Rate: 0%
+Running evaluation with seed 1083 for task configs/table/lift_barrier.yaml...
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+2026-08-02 00:29:26.031621: W external/xla/xla/service/gpu/nvptx_compiler.cc:765] The NVIDIA driver's CUDA version is 12.2 which is older than the ptxas CUDA version (12.9.86). Because the driver is older than the ptxas version, XLA is disabling parallel compilation, which may slow down compilation. You should update your NVIDIA driver or use the NVIDIA-provided CUDA forward compatibility packages.
+[33;1m2026-08-02 00:29:28,159 - mani_skill  - WARNING - No initial pose set for actor builder of barrier, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.max_episode_steps to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.max_episode_steps` for environment variables or `env.get_wrapper_attr('max_episode_steps')` that will search the reminding wrappers.[0m
+  logger.warn(
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.agent to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.agent` for environment variables or `env.get_wrapper_attr('agent')` that will search the reminding wrappers.[0m
+  logger.warn(
+[33;1m2026-08-02 00:29:28,676 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual0, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+[33;1m2026-08-02 00:29:28,677 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual1, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+Traceback (most recent call last):
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 407, in <module>
+    main(parsed_args)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 237, in main
+    goal = load_goals(goal_path)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 116, in load_goals
+    with open(goal_dir, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'policy/OGCRL/ogcrl/goal/LiftBarrier-rf_Agent0_150_Temperal.pkl'
+PandaArm Control Mode: pd_joint_pos
+Seed 1083 done. Success Rate: 0%
+Running evaluation with seed 1084 for task configs/table/lift_barrier.yaml...
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+2026-08-02 00:29:34.641809: W external/xla/xla/service/gpu/nvptx_compiler.cc:765] The NVIDIA driver's CUDA version is 12.2 which is older than the ptxas CUDA version (12.9.86). Because the driver is older than the ptxas version, XLA is disabling parallel compilation, which may slow down compilation. You should update your NVIDIA driver or use the NVIDIA-provided CUDA forward compatibility packages.
+[33;1m2026-08-02 00:29:36,746 - mani_skill  - WARNING - No initial pose set for actor builder of barrier, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.max_episode_steps to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.max_episode_steps` for environment variables or `env.get_wrapper_attr('max_episode_steps')` that will search the reminding wrappers.[0m
+  logger.warn(
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.agent to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.agent` for environment variables or `env.get_wrapper_attr('agent')` that will search the reminding wrappers.[0m
+  logger.warn(
+[33;1m2026-08-02 00:29:37,258 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual0, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+[33;1m2026-08-02 00:29:37,259 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual1, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+Traceback (most recent call last):
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 407, in <module>
+    main(parsed_args)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 237, in main
+    goal = load_goals(goal_path)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 116, in load_goals
+    with open(goal_dir, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'policy/OGCRL/ogcrl/goal/LiftBarrier-rf_Agent0_150_Temperal.pkl'
+PandaArm Control Mode: pd_joint_pos
+Seed 1084 done. Success Rate: 0%
+Running evaluation with seed 1085 for task configs/table/lift_barrier.yaml...
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+2026-08-02 00:29:43.292966: W external/xla/xla/service/gpu/nvptx_compiler.cc:765] The NVIDIA driver's CUDA version is 12.2 which is older than the ptxas CUDA version (12.9.86). Because the driver is older than the ptxas version, XLA is disabling parallel compilation, which may slow down compilation. You should update your NVIDIA driver or use the NVIDIA-provided CUDA forward compatibility packages.
+[33;1m2026-08-02 00:29:45,561 - mani_skill  - WARNING - No initial pose set for actor builder of barrier, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.max_episode_steps to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.max_episode_steps` for environment variables or `env.get_wrapper_attr('max_episode_steps')` that will search the reminding wrappers.[0m
+  logger.warn(
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.agent to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.agent` for environment variables or `env.get_wrapper_attr('agent')` that will search the reminding wrappers.[0m
+  logger.warn(
+[33;1m2026-08-02 00:29:46,071 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual0, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+[33;1m2026-08-02 00:29:46,072 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual1, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+Traceback (most recent call last):
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 407, in <module>
+    main(parsed_args)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 237, in main
+    goal = load_goals(goal_path)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 116, in load_goals
+    with open(goal_dir, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'policy/OGCRL/ogcrl/goal/LiftBarrier-rf_Agent0_150_Temperal.pkl'
+PandaArm Control Mode: pd_joint_pos
+Seed 1085 done. Success Rate: 0%
+Running evaluation with seed 1086 for task configs/table/lift_barrier.yaml...
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+2026-08-02 00:29:52.148848: W external/xla/xla/service/gpu/nvptx_compiler.cc:765] The NVIDIA driver's CUDA version is 12.2 which is older than the ptxas CUDA version (12.9.86). Because the driver is older than the ptxas version, XLA is disabling parallel compilation, which may slow down compilation. You should update your NVIDIA driver or use the NVIDIA-provided CUDA forward compatibility packages.
+[33;1m2026-08-02 00:29:54,358 - mani_skill  - WARNING - No initial pose set for actor builder of barrier, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.max_episode_steps to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.max_episode_steps` for environment variables or `env.get_wrapper_attr('max_episode_steps')` that will search the reminding wrappers.[0m
+  logger.warn(
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.agent to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.agent` for environment variables or `env.get_wrapper_attr('agent')` that will search the reminding wrappers.[0m
+  logger.warn(
+[33;1m2026-08-02 00:29:54,868 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual0, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+[33;1m2026-08-02 00:29:54,869 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual1, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+Traceback (most recent call last):
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 407, in <module>
+    main(parsed_args)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 237, in main
+    goal = load_goals(goal_path)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 116, in load_goals
+    with open(goal_dir, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'policy/OGCRL/ogcrl/goal/LiftBarrier-rf_Agent0_150_Temperal.pkl'
+PandaArm Control Mode: pd_joint_pos
+Seed 1086 done. Success Rate: 0%
+Running evaluation with seed 1087 for task configs/table/lift_barrier.yaml...
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+2026-08-02 00:30:00.814610: W external/xla/xla/service/gpu/nvptx_compiler.cc:765] The NVIDIA driver's CUDA version is 12.2 which is older than the ptxas CUDA version (12.9.86). Because the driver is older than the ptxas version, XLA is disabling parallel compilation, which may slow down compilation. You should update your NVIDIA driver or use the NVIDIA-provided CUDA forward compatibility packages.
+[33;1m2026-08-02 00:30:02,895 - mani_skill  - WARNING - No initial pose set for actor builder of barrier, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.max_episode_steps to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.max_episode_steps` for environment variables or `env.get_wrapper_attr('max_episode_steps')` that will search the reminding wrappers.[0m
+  logger.warn(
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.agent to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.agent` for environment variables or `env.get_wrapper_attr('agent')` that will search the reminding wrappers.[0m
+  logger.warn(
+[33;1m2026-08-02 00:30:03,397 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual0, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+[33;1m2026-08-02 00:30:03,398 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual1, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+Traceback (most recent call last):
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 407, in <module>
+    main(parsed_args)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 237, in main
+    goal = load_goals(goal_path)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 116, in load_goals
+    with open(goal_dir, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'policy/OGCRL/ogcrl/goal/LiftBarrier-rf_Agent0_150_Temperal.pkl'
+PandaArm Control Mode: pd_joint_pos
+Seed 1087 done. Success Rate: 0%
+Running evaluation with seed 1088 for task configs/table/lift_barrier.yaml...
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+2026-08-02 00:30:09.562452: W external/xla/xla/service/gpu/nvptx_compiler.cc:765] The NVIDIA driver's CUDA version is 12.2 which is older than the ptxas CUDA version (12.9.86). Because the driver is older than the ptxas version, XLA is disabling parallel compilation, which may slow down compilation. You should update your NVIDIA driver or use the NVIDIA-provided CUDA forward compatibility packages.
+[33;1m2026-08-02 00:30:11,741 - mani_skill  - WARNING - No initial pose set for actor builder of barrier, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.max_episode_steps to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.max_episode_steps` for environment variables or `env.get_wrapper_attr('max_episode_steps')` that will search the reminding wrappers.[0m
+  logger.warn(
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.agent to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.agent` for environment variables or `env.get_wrapper_attr('agent')` that will search the reminding wrappers.[0m
+  logger.warn(
+[33;1m2026-08-02 00:30:12,281 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual0, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+[33;1m2026-08-02 00:30:12,282 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual1, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+Traceback (most recent call last):
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 407, in <module>
+    main(parsed_args)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 237, in main
+    goal = load_goals(goal_path)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 116, in load_goals
+    with open(goal_dir, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'policy/OGCRL/ogcrl/goal/LiftBarrier-rf_Agent0_150_Temperal.pkl'
+PandaArm Control Mode: pd_joint_pos
+Seed 1088 done. Success Rate: 0%
+Running evaluation with seed 1089 for task configs/table/lift_barrier.yaml...
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+2026-08-02 00:30:18.323123: W external/xla/xla/service/gpu/nvptx_compiler.cc:765] The NVIDIA driver's CUDA version is 12.2 which is older than the ptxas CUDA version (12.9.86). Because the driver is older than the ptxas version, XLA is disabling parallel compilation, which may slow down compilation. You should update your NVIDIA driver or use the NVIDIA-provided CUDA forward compatibility packages.
+[33;1m2026-08-02 00:30:20,480 - mani_skill  - WARNING - No initial pose set for actor builder of barrier, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.max_episode_steps to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.max_episode_steps` for environment variables or `env.get_wrapper_attr('max_episode_steps')` that will search the reminding wrappers.[0m
+  logger.warn(
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.agent to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.agent` for environment variables or `env.get_wrapper_attr('agent')` that will search the reminding wrappers.[0m
+  logger.warn(
+[33;1m2026-08-02 00:30:20,992 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual0, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+[33;1m2026-08-02 00:30:20,993 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual1, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+Traceback (most recent call last):
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 407, in <module>
+    main(parsed_args)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 237, in main
+    goal = load_goals(goal_path)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 116, in load_goals
+    with open(goal_dir, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'policy/OGCRL/ogcrl/goal/LiftBarrier-rf_Agent0_150_Temperal.pkl'
+PandaArm Control Mode: pd_joint_pos
+Seed 1089 done. Success Rate: 0%
+Running evaluation with seed 1090 for task configs/table/lift_barrier.yaml...
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+2026-08-02 00:30:26.955921: W external/xla/xla/service/gpu/nvptx_compiler.cc:765] The NVIDIA driver's CUDA version is 12.2 which is older than the ptxas CUDA version (12.9.86). Because the driver is older than the ptxas version, XLA is disabling parallel compilation, which may slow down compilation. You should update your NVIDIA driver or use the NVIDIA-provided CUDA forward compatibility packages.
+[33;1m2026-08-02 00:30:29,121 - mani_skill  - WARNING - No initial pose set for actor builder of barrier, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.max_episode_steps to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.max_episode_steps` for environment variables or `env.get_wrapper_attr('max_episode_steps')` that will search the reminding wrappers.[0m
+  logger.warn(
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.agent to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.agent` for environment variables or `env.get_wrapper_attr('agent')` that will search the reminding wrappers.[0m
+  logger.warn(
+[33;1m2026-08-02 00:30:29,645 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual0, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+[33;1m2026-08-02 00:30:29,645 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual1, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+Traceback (most recent call last):
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 407, in <module>
+    main(parsed_args)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 237, in main
+    goal = load_goals(goal_path)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 116, in load_goals
+    with open(goal_dir, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'policy/OGCRL/ogcrl/goal/LiftBarrier-rf_Agent0_150_Temperal.pkl'
+PandaArm Control Mode: pd_joint_pos
+Seed 1090 done. Success Rate: 0%
+Running evaluation with seed 1091 for task configs/table/lift_barrier.yaml...
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+2026-08-02 00:30:35.778867: W external/xla/xla/service/gpu/nvptx_compiler.cc:765] The NVIDIA driver's CUDA version is 12.2 which is older than the ptxas CUDA version (12.9.86). Because the driver is older than the ptxas version, XLA is disabling parallel compilation, which may slow down compilation. You should update your NVIDIA driver or use the NVIDIA-provided CUDA forward compatibility packages.
+[33;1m2026-08-02 00:30:38,098 - mani_skill  - WARNING - No initial pose set for actor builder of barrier, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.max_episode_steps to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.max_episode_steps` for environment variables or `env.get_wrapper_attr('max_episode_steps')` that will search the reminding wrappers.[0m
+  logger.warn(
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.agent to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.agent` for environment variables or `env.get_wrapper_attr('agent')` that will search the reminding wrappers.[0m
+  logger.warn(
+[33;1m2026-08-02 00:30:38,617 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual0, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+[33;1m2026-08-02 00:30:38,618 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual1, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+Traceback (most recent call last):
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 407, in <module>
+    main(parsed_args)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 237, in main
+    goal = load_goals(goal_path)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 116, in load_goals
+    with open(goal_dir, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'policy/OGCRL/ogcrl/goal/LiftBarrier-rf_Agent0_150_Temperal.pkl'
+PandaArm Control Mode: pd_joint_pos
+Seed 1091 done. Success Rate: 0%
+Running evaluation with seed 1092 for task configs/table/lift_barrier.yaml...
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+2026-08-02 00:30:44.870421: W external/xla/xla/service/gpu/nvptx_compiler.cc:765] The NVIDIA driver's CUDA version is 12.2 which is older than the ptxas CUDA version (12.9.86). Because the driver is older than the ptxas version, XLA is disabling parallel compilation, which may slow down compilation. You should update your NVIDIA driver or use the NVIDIA-provided CUDA forward compatibility packages.
+[33;1m2026-08-02 00:30:47,007 - mani_skill  - WARNING - No initial pose set for actor builder of barrier, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.max_episode_steps to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.max_episode_steps` for environment variables or `env.get_wrapper_attr('max_episode_steps')` that will search the reminding wrappers.[0m
+  logger.warn(
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.agent to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.agent` for environment variables or `env.get_wrapper_attr('agent')` that will search the reminding wrappers.[0m
+  logger.warn(
+[33;1m2026-08-02 00:30:47,505 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual0, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+[33;1m2026-08-02 00:30:47,505 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual1, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+Traceback (most recent call last):
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 407, in <module>
+    main(parsed_args)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 237, in main
+    goal = load_goals(goal_path)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 116, in load_goals
+    with open(goal_dir, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'policy/OGCRL/ogcrl/goal/LiftBarrier-rf_Agent0_150_Temperal.pkl'
+PandaArm Control Mode: pd_joint_pos
+Seed 1092 done. Success Rate: 0%
+Running evaluation with seed 1093 for task configs/table/lift_barrier.yaml...
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+2026-08-02 00:30:53.482354: W external/xla/xla/service/gpu/nvptx_compiler.cc:765] The NVIDIA driver's CUDA version is 12.2 which is older than the ptxas CUDA version (12.9.86). Because the driver is older than the ptxas version, XLA is disabling parallel compilation, which may slow down compilation. You should update your NVIDIA driver or use the NVIDIA-provided CUDA forward compatibility packages.
+[33;1m2026-08-02 00:30:55,547 - mani_skill  - WARNING - No initial pose set for actor builder of barrier, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.max_episode_steps to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.max_episode_steps` for environment variables or `env.get_wrapper_attr('max_episode_steps')` that will search the reminding wrappers.[0m
+  logger.warn(
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.agent to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.agent` for environment variables or `env.get_wrapper_attr('agent')` that will search the reminding wrappers.[0m
+  logger.warn(
+[33;1m2026-08-02 00:30:56,052 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual0, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+[33;1m2026-08-02 00:30:56,053 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual1, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+Traceback (most recent call last):
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 407, in <module>
+    main(parsed_args)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 237, in main
+    goal = load_goals(goal_path)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 116, in load_goals
+    with open(goal_dir, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'policy/OGCRL/ogcrl/goal/LiftBarrier-rf_Agent0_150_Temperal.pkl'
+PandaArm Control Mode: pd_joint_pos
+Seed 1093 done. Success Rate: 0%
+Running evaluation with seed 1094 for task configs/table/lift_barrier.yaml...
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+2026-08-02 00:31:02.070345: W external/xla/xla/service/gpu/nvptx_compiler.cc:765] The NVIDIA driver's CUDA version is 12.2 which is older than the ptxas CUDA version (12.9.86). Because the driver is older than the ptxas version, XLA is disabling parallel compilation, which may slow down compilation. You should update your NVIDIA driver or use the NVIDIA-provided CUDA forward compatibility packages.
+[33;1m2026-08-02 00:31:04,266 - mani_skill  - WARNING - No initial pose set for actor builder of barrier, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.max_episode_steps to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.max_episode_steps` for environment variables or `env.get_wrapper_attr('max_episode_steps')` that will search the reminding wrappers.[0m
+  logger.warn(
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.agent to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.agent` for environment variables or `env.get_wrapper_attr('agent')` that will search the reminding wrappers.[0m
+  logger.warn(
+[33;1m2026-08-02 00:31:04,822 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual0, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+[33;1m2026-08-02 00:31:04,823 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual1, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+Traceback (most recent call last):
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 407, in <module>
+    main(parsed_args)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 237, in main
+    goal = load_goals(goal_path)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 116, in load_goals
+    with open(goal_dir, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'policy/OGCRL/ogcrl/goal/LiftBarrier-rf_Agent0_150_Temperal.pkl'
+PandaArm Control Mode: pd_joint_pos
+Seed 1094 done. Success Rate: 0%
+Running evaluation with seed 1095 for task configs/table/lift_barrier.yaml...
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+2026-08-02 00:31:10.959377: W external/xla/xla/service/gpu/nvptx_compiler.cc:765] The NVIDIA driver's CUDA version is 12.2 which is older than the ptxas CUDA version (12.9.86). Because the driver is older than the ptxas version, XLA is disabling parallel compilation, which may slow down compilation. You should update your NVIDIA driver or use the NVIDIA-provided CUDA forward compatibility packages.
+[33;1m2026-08-02 00:31:13,188 - mani_skill  - WARNING - No initial pose set for actor builder of barrier, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.max_episode_steps to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.max_episode_steps` for environment variables or `env.get_wrapper_attr('max_episode_steps')` that will search the reminding wrappers.[0m
+  logger.warn(
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.agent to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.agent` for environment variables or `env.get_wrapper_attr('agent')` that will search the reminding wrappers.[0m
+  logger.warn(
+[33;1m2026-08-02 00:31:13,689 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual0, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+[33;1m2026-08-02 00:31:13,690 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual1, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+Traceback (most recent call last):
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 407, in <module>
+    main(parsed_args)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 237, in main
+    goal = load_goals(goal_path)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 116, in load_goals
+    with open(goal_dir, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'policy/OGCRL/ogcrl/goal/LiftBarrier-rf_Agent0_150_Temperal.pkl'
+PandaArm Control Mode: pd_joint_pos
+Seed 1095 done. Success Rate: 0%
+Running evaluation with seed 1096 for task configs/table/lift_barrier.yaml...
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+2026-08-02 00:31:19.795756: W external/xla/xla/service/gpu/nvptx_compiler.cc:765] The NVIDIA driver's CUDA version is 12.2 which is older than the ptxas CUDA version (12.9.86). Because the driver is older than the ptxas version, XLA is disabling parallel compilation, which may slow down compilation. You should update your NVIDIA driver or use the NVIDIA-provided CUDA forward compatibility packages.
+[33;1m2026-08-02 00:31:21,915 - mani_skill  - WARNING - No initial pose set for actor builder of barrier, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.max_episode_steps to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.max_episode_steps` for environment variables or `env.get_wrapper_attr('max_episode_steps')` that will search the reminding wrappers.[0m
+  logger.warn(
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.agent to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.agent` for environment variables or `env.get_wrapper_attr('agent')` that will search the reminding wrappers.[0m
+  logger.warn(
+[33;1m2026-08-02 00:31:22,449 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual0, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+[33;1m2026-08-02 00:31:22,450 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual1, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+Traceback (most recent call last):
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 407, in <module>
+    main(parsed_args)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 237, in main
+    goal = load_goals(goal_path)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 116, in load_goals
+    with open(goal_dir, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'policy/OGCRL/ogcrl/goal/LiftBarrier-rf_Agent0_150_Temperal.pkl'
+PandaArm Control Mode: pd_joint_pos
+Seed 1096 done. Success Rate: 0%
+Running evaluation with seed 1097 for task configs/table/lift_barrier.yaml...
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+2026-08-02 00:31:28.307862: W external/xla/xla/service/gpu/nvptx_compiler.cc:765] The NVIDIA driver's CUDA version is 12.2 which is older than the ptxas CUDA version (12.9.86). Because the driver is older than the ptxas version, XLA is disabling parallel compilation, which may slow down compilation. You should update your NVIDIA driver or use the NVIDIA-provided CUDA forward compatibility packages.
+[33;1m2026-08-02 00:31:30,526 - mani_skill  - WARNING - No initial pose set for actor builder of barrier, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.max_episode_steps to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.max_episode_steps` for environment variables or `env.get_wrapper_attr('max_episode_steps')` that will search the reminding wrappers.[0m
+  logger.warn(
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.agent to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.agent` for environment variables or `env.get_wrapper_attr('agent')` that will search the reminding wrappers.[0m
+  logger.warn(
+[33;1m2026-08-02 00:31:31,040 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual0, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+[33;1m2026-08-02 00:31:31,040 - mani_skill  - WARNING - No initial pose set for actor builder of grasp_pose_visual1, setting to default pose q=[1,0,0,0], p=[0,0,0].[0m
+Traceback (most recent call last):
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 407, in <module>
+    main(parsed_args)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 237, in main
+    goal = load_goals(goal_path)
+  File "/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/./policy/OGCRL/eval_multi_dp.py", line 116, in load_goals
+    with open(goal_dir, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'policy/OGCRL/ogcrl/goal/LiftBarrier-rf_Agent0_150_Temperal.pkl'
+PandaArm Control Mode: pd_joint_pos
+Seed 1097 done. Success Rate: 0%
+Running evaluation with seed 1098 for task configs/table/lift_barrier.yaml...
+/media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+2026-08-02 00:31:37.160251: W external/xla/xla/service/gpu/nvptx_compiler.cc:765] The NVIDIA driver's CUDA version is 12.2 which is older than the ptxas CUDA version (12.9.86). Because the driver is older than the ptxas version, XLA is disabling parallel compilation, which may slow down compilation. You should update your NVIDIA driver or use the NVIDIA-provided CUDA forward compatibility packages.
