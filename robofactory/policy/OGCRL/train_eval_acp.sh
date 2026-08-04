@@ -275,4 +275,3 @@ python policy/OGCRL/train.py \
   save_dir=expacp
 
 bash ./policy/OGCRL/eval_multi.sh configs/table/place_food.yaml 150  1 PlaceFood policy/OGCRL/ogcrl/config/agent/crl.yaml expacp/MANGOBench/crl 38800 policy/OGCRL/ogcrl/goal/ visual None None  impala_small None 0.5 None 3.0 crl
-

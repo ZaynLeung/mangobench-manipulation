@@ -233,7 +233,8 @@ def main(args: Args):
 
     # Load temporal subgoals for all agents
     for i in range(agent_num):
-        goal_path = os.path.join(args.goal_dir, f"{args.task_name}_Agent{i}_{args.data_num}_Temperal.pkl")
+        # goal_path = os.path.join(args.goal_dir, f"{args.task_name}_Agent{i}_{args.data_num}_Temperal.pkl")
+        goal_path = os.path.join(args.goal_dir, f"{args.task_name}_Agent{i}_{args.data_num}_Temperal.pkl") ##已解决加载问题
         goal = load_goals(goal_path)
         goals.append(goal)
     goal_len = len(goals[0]["state"])

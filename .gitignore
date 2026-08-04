@@ -4,11 +4,13 @@ robofactory/assets/
 *.egg-info/
 __pycache__/
 # 实验记录
+*.mp4        # 忽略所有 .mp4 文件
 wandb/
 output/
 outputs/
 *.log        # 忽略所有 .log 文件
 log/         # 忽略 log 目录
+*.png        # 忽略所有 .png 文件
 # 数据集
 data/
 *.pkl
