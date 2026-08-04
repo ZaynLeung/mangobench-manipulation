@@ -214,22 +214,23 @@ def main(args: Args):
     # Load multi gc policy
     agent_num = planner.agent_num
     goals = []  # multi-agent goals
-    # 归一化器
     normalizers = [None for _ in range(agent_num)]
     if args.restore_path is not None:
         for i in range(agent_num):
-            candidates = [
-                os.path.join(args.restore_path, f"{args.task_name}_Agent{i}_{args.data_num}", "action_normalizer.pkl"),
-                os.path.join(args.restore_path, f"Agent{i}_action_normalizer.pkl"),
-                os.path.join(args.restore_path, "action_normalizer.pkl"),
-            ]
-            for p in candidates:
-                if os.path.isfile(p):
-                    try:
-                        normalizers[i] = ActionNormalizer.load(p)
-                        break
-                    except Exception:
-                        normalizers[i] = None
+            agent_dir = os.path.join(args.restore_path, f"{args.task_name}_Agent{i}_{args.data_num}")
+            normalizer_path = os.path.join(agent_dir, "action_normalizer.pkl")
+            if not os.path.isfile(normalizer_path):
+                raise FileNotFoundError(
+                    f"Action normalizer not found for Agent{i}: {normalizer_path}. "
+                    f"Expected to be alongside params_{args.restore_epoch}.pkl in {agent_dir}"
+                )
+            try:
+                normalizers[i] = ActionNormalizer.load(normalizer_path)
+            except Exception as e:
+                raise RuntimeError(
+                    f"Failed to load action normalizer for Agent{i}: {normalizer_path}. "
+                    f"{type(e).__name__}: {e}"
+                ) from e
 
     # Load temporal subgoals for all agents
     for i in range(agent_num):
