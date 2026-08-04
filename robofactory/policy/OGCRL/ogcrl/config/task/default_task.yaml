@@ -9,3 +9,4 @@ dataset:
   seed: 42
   val_ratio: 0.02
   max_train_episodes: 90
+  normalize_actions: false
