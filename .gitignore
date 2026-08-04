@@ -15,3 +15,5 @@ log/         # 忽略 log 目录
 data/
 *.pkl
 *.h5
+# 数据集
+data/
