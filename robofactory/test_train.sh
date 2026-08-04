@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-export CUDA_VISIBLE_DEVICES=4
+export CUDA_VISIBLE_DEVICES=0
 ROOT_DIR="/home/wangyi/Liangziyan/mangobench-manipulation/robofactory"
 DATA_ZARR="/media/disk/wangyi/RoboFactory/robofactory/data/zarr_data/"
 # 用于后续拼接各个智能体的数据集路径
@@ -326,7 +326,7 @@ python policy/OGCRL/train.py \
     task.dataset.normalize_actions=true \
     training.debug=False \
     training.seed=100 \
-    training.device=cuda:6 \
+    training.device=cuda:0 \
     exp_name=LiftBarrier-rf-robot_gc-train \
     logging.mode=online \
     env_name=robofactory \
@@ -354,7 +354,7 @@ python policy/OGCRL/train.py \
     task.dataset.normalize_actions=true \
     training.debug=False \
     training.seed=100 \
-    training.device=cuda:6 \
+    training.device=cuda:0 \
     exp_name=LiftBarrier-rf-robot_gc-train \
     logging.mode=online \
     env_name=robofactory \
@@ -379,4 +379,4 @@ bash ./policy/OGCRL/eval_multi.sh configs/table/lift_barrier.yaml 150  1 LiftBar
 # 结束
 cd ..
 cd ..
-python run.py --size 16 --gpu 6
+python run.py --size 16 --gpu 0
