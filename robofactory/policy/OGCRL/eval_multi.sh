@@ -33,6 +33,11 @@ AGENT_P_AUG="${14:-None}"
 AGENT_SUBGOAL_STEPS="${15:-None}"
 AGENT_ALPHA="${16:-None}"
 AGENT_NAME="${17:-None}"
+EXP_ID="${18:-}"
+RECORD_DIR="./eval_gc_video/{env_id}"
+if [ -n "$EXP_ID" ]; then
+    RECORD_DIR="./eval_gc_video/exp_${EXP_ID}/{env_id}"
+fi
 # Generate a log file with timestamp
 LOG_FILE="eval_results_${TASK_NAME}_${DATA_NUM}_${RESTORE_EPOCH}_${AGENT_NAME}_$(date +"%Y%m%d_%H%M%S").log"
 
@@ -65,6 +70,7 @@ do
                 --restore_path "$RESTORE_PATH" \
                 --restore_epoch "$RESTORE_EPOCH" \
                 --goal_dir "$GOAL_DIR" \
+                --record_dir "$RECORD_DIR" \
                 --observation "$OBSERVATION" \
                 --agent_high_alpha "$AGENT_HIGH_ALPHA" \
                 --agent_low_alpha "$AGENT_LOW_ALPHA" \
@@ -88,6 +94,7 @@ do
                 --restore_path "$RESTORE_PATH" \
                 --restore_epoch "$RESTORE_EPOCH" \
                 --goal_dir "$GOAL_DIR" \
+                --record_dir "$RECORD_DIR" \
                 --observation "$OBSERVATION" \
                 --agent_high_alpha "$AGENT_HIGH_ALPHA" \
                 --agent_low_alpha "$AGENT_LOW_ALPHA" \

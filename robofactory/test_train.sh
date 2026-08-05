@@ -8,6 +8,9 @@ OUTPUT_DIR="/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/expacp/M
 # OUTPUT_DIR="/media/data01/wangyi/liangziyan/mangobench_manipulation/logs/IHIQL_LiftBarrier"
 
 # GOAL_PATH="policy/OGCRL/ogcrl/goal"
+EXP_ID="${EXP_ID:-06}"
+SAVE_DIR="${OUTPUT_DIR}${EXP_ID}"
+GOAL_DIR="policy/OGCRL/ogcrl/goal${EXP_ID}"
 
 if [ ! -e "$DATA_ZARR" ]; then
   echo "[ERROR] Training data not found: $DATA_ZARR" >&2
@@ -323,7 +326,7 @@ python policy/OGCRL/train.py \
     --config-name=robot_gc_test_train.yaml \
     task.name=LiftBarrier-rf \
     task.dataset.zarr_path="${DATA_ZARR}LiftBarrier-rf_Agent0_150.zarr" \
-    task.dataset.normalize_actions=true \
+    +task.dataset.normalize_actions=true \
     training.debug=False \
     training.seed=100 \
     training.device=cuda:0 \
@@ -342,16 +345,16 @@ python policy/OGCRL/train.py \
     agent.p_aug=0.5 \
     agent.subgoal_steps=10 \
     observation=visual \
-    save_dir="$SAVE_DIR_06" \
+    save_dir="$SAVE_DIR" \
     save_goal=True \
-    save_goal_path="/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/policy/OGCRL/ogcrl/goal06/LiftBarrier-rf_Agent0_150_Temperal.pkl"
+    save_goal_path="${GOAL_DIR}/LiftBarrier-rf_Agent0_150_Temperal.pkl"
 
 
 python policy/OGCRL/train.py \
     --config-name=robot_gc_test_train.yaml \
     task.name=LiftBarrier-rf \
     task.dataset.zarr_path="${DATA_ZARR}LiftBarrier-rf_Agent1_150.zarr" \
-    task.dataset.normalize_actions=true \
+    +task.dataset.normalize_actions=true \
     training.debug=False \
     training.seed=100 \
     training.device=cuda:0 \
@@ -370,11 +373,11 @@ python policy/OGCRL/train.py \
     agent.p_aug=0.5 \
     agent.subgoal_steps=10 \
     observation=visual \
-    save_dir="$SAVE_DIR_06" \
+    save_dir="$SAVE_DIR" \
     save_goal=True \
-    save_goal_path="/home/wangyi/Liangziyan/mangobench-manipulation/robofactory/policy/OGCRL/ogcrl/goal06/LiftBarrier-rf_Agent1_150_Temperal.pkl"
+    save_goal_path="${GOAL_DIR}/LiftBarrier-rf_Agent1_150_Temperal.pkl"
 
-bash ./policy/OGCRL/eval_multi.sh configs/table/lift_barrier.yaml 150  1 LiftBarrier-rf policy/OGCRL/ogcrl/config/agent/hiql.yaml "$SAVE_DIR_06/MANGOBench/hiql" 15000 policy/OGCRL/ogcrl/goal06/ visual 3.0 3.0  impala_small True 0.5 10 None hiql
+bash ./policy/OGCRL/eval_multi.sh configs/table/lift_barrier.yaml 150  1 LiftBarrier-rf policy/OGCRL/ogcrl/config/agent/hiql.yaml "$SAVE_DIR/MANGOBench/hiql" 15000 "$GOAL_DIR" visual 3.0 3.0  impala_small True 0.5 10 None hiql "$EXP_ID"
 
 # 结束
 cd ..
