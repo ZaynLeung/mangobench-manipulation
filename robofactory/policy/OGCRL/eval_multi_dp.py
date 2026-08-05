@@ -196,9 +196,13 @@ def main(args: Args):
         env_kwargs["robot_uids"] = tuple(args.robot_uids.split(","))
     env: BaseEnv = gym.make(env_id, **env_kwargs)
 
-    record_dir = args.record_dir + '/' + args.observation + '/' + str(args.seed) + '_' + str(args.data_num) + '_' + str(args.restore_epoch)
-    if record_dir:
-        record_dir = record_dir.format(env_id=env_id)
+    goal_vis_dir = None
+    record_dir = None
+    if args.record_dir:
+        base_record_dir = args.record_dir.format(env_id=env_id)
+        goal_vis_dir = os.path.join(base_record_dir, args.observation)
+        os.makedirs(goal_vis_dir, exist_ok=True)
+        record_dir = os.path.join(goal_vis_dir, f"{args.seed}_{args.data_num}_{args.restore_epoch}")
         env = RecordEpisodeMA(env, record_dir, info_on_video=False, save_trajectory=False, max_steps_per_video=30000)
     raw_obs, _ = env.reset(seed=args.seed[0])
     planner = PandaArmMotionPlanningSolver(
@@ -257,8 +261,9 @@ def main(args: Args):
             # Resize to (64, 64)
             head_cam_resized = cv2.resize(head_cam, (64, 64), interpolation=cv2.INTER_AREA)
 
-            # Save debug PNG
             save_path = f"goal_64_{args.task_name}_goal{j}_agent{agent_id}.png"
+            if goal_vis_dir is not None:
+                save_path = os.path.join(goal_vis_dir, save_path)
             cv2.imwrite(save_path, cv2.cvtColor(head_cam_resized, cv2.COLOR_RGB2BGR))
 
             goal_group.append({
@@ -296,6 +301,8 @@ def main(args: Args):
         obs = get_model_input(raw_obs, initial_qpos, id)
         observations.append(obs)
         save_path = f"head_cam_64_agent{id}.png"
+        if goal_vis_dir is not None:
+            save_path = os.path.join(goal_vis_dir, save_path)
         cv2.imwrite(save_path, cv2.cvtColor(obs['head_cam'], cv2.COLOR_RGB2BGR))
 
     actor_fns = {
