@@ -1,14 +1,19 @@
 nohup: ignoring input
+====== 开始处理实验 ID: 01 ======
 /media/data01/wangyi/conda_envs/RoboFactory-LZY/lib/python3.9/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
   import pynvml  # type: ignore[import]
 /media/disk/wangyi/RoboFactory/robofactory/data/zarr_data/LiftBarrier-rf_Agent0_150.zarr LiftBarrier-rf
 [INFO] Using training data: /media/disk/wangyi/RoboFactory/robofactory/data/zarr_data/LiftBarrier-rf_Agent0_150.zarr
-[INFO] Training output dir: /home/wangyi/Liangziyan/mangobench-manipulation/robofactory/expacp/MANGOBench/hiql06
-[INFO] Goal file path: /home/wangyi/Liangziyan/mangobench-manipulation/robofactory/policy/OGCRL/ogcrl/goal06/LiftBarrier-rf_Agent0_150_Temperal.pkl
+[INFO] Training output dir: /home/wangyi/Liangziyan/mangobench-manipulation/robofactory/expacp/MANGOBench/hiql01
+[WARN] save_goal_path is not absolute; resolved to /home/wangyi/Liangziyan/mangobench-manipulation/robofactory/policy/OGCRL/ogcrl/goal01/LiftBarrier-rf_Agent0_150_Temperal.pkl
+[INFO] Goal file path: /home/wangyi/Liangziyan/mangobench-manipulation/robofactory/policy/OGCRL/ogcrl/goal01/LiftBarrier-rf_Agent0_150_Temperal.pkl
 Converting diffusion dataset to goal-conditioned format...
 start: 0 end: 102
 goal_idxs: [ 20  40  61  81 102]
-[INFO] 5 Goals saved to /home/wangyi/Liangziyan/mangobench-manipulation/robofactory/policy/OGCRL/ogcrl/goal06/LiftBarrier-rf_Agent0_150_Temperal.pkl
-[2026-08-04 17:54:34,869][jax._src.xla_bridge][INFO] - Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
-[2026-08-04 17:54:34,871][jax._src.xla_bridge][INFO] - Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
-2026-08-04 17:54:34.959431: W external/xla/xla/service/gpu/nvptx_compiler.cc:765] The NVIDIA driver's CUDA version is 12.2 which is older than the ptxas CUDA version (12.9.86). Because the driver is older than the ptxas version, XLA is disabling parallel compilation, which may slow down compilation. You should update your NVIDIA driver or use the NVIDIA-provided CUDA forward compatibility packages.
+[INFO] 5 Goals saved to /home/wangyi/Liangziyan/mangobench-manipulation/robofactory/policy/OGCRL/ogcrl/goal01/LiftBarrier-rf_Agent0_150_Temperal.pkl
+[2026-08-05 11:19:18,113][jax._src.xla_bridge][INFO] - Unable to initialize backend 'rocm': module 'jaxlib.xla_extension' has no attribute 'GpuAllocatorConfig'
+[2026-08-05 11:19:18,114][jax._src.xla_bridge][INFO] - Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+2026-08-05 11:19:18.193925: W external/xla/xla/service/gpu/nvptx_compiler.cc:765] The NVIDIA driver's CUDA version is 12.2 which is older than the ptxas CUDA version (12.9.86). Because the driver is older than the ptxas version, XLA is disabling parallel compilation, which may slow down compilation. You should update your NVIDIA driver or use the NVIDIA-provided CUDA forward compatibility packages.
+output_dir: /home/wangyi/Liangziyan/mangobench-manipulation/robofactory/data/outputs/2026.08.05/11.18.54_robot_LiftBarrier-rf_LiftBarrier-rf
+  0%|          | 0/15000 [00:00<?, ?it/s]device [cuda(id=0)]
+gpu
