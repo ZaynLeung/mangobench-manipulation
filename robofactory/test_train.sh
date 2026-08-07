@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-export CUDA_VISIBLE_DEVICES=4
+export CUDA_VISIBLE_DEVICES=5
 ROOT_DIR="/home/wangyi/Liangziyan/mangobench-manipulation/robofactory"
 DATA_ZARR="/media/disk/wangyi/RoboFactory/robofactory/data/zarr_data/"
 # 用于后续拼接各个智能体的数据集路径
@@ -24,7 +24,7 @@ cd "$ROOT_DIR"
 
 # 循环
 # 循环 01 ~ 03
-for EXP_ID in 01 02 03; do
+for EXP_ID in 01 01 02 02 03 03; do
   echo "====== 开始处理实验 ID: $EXP_ID ======"
   # EXP_ID="${EXP_ID:-01}
   SAVE_DIR="${OUTPUT_DIR}${EXP_ID}"
@@ -41,60 +41,60 @@ for EXP_ID in 01 02 03; do
     mkdir -p "$GOAL_DIR"
   fi
 
-  python policy/OGCRL/train.py \
-      --config-name=robot_gc_test_train.yaml \
-      task.name=LiftBarrier-rf \
-      task.dataset.zarr_path="${DATA_ZARR}LiftBarrier-rf_Agent0_150.zarr" \
-      task.dataset.normalize_actions=true \
-      training.debug=False \
-      training.seed=100 \
-      training.device=cuda:4 \
-      exp_name=LiftBarrier-rf-robot_gc-train \
-      logging.mode=online \
-      env_name=robofactory \
-      agent=hiql \
-      agent.high_alpha=3.0 \
-      agent.low_alpha=3.0 \
-      train_steps=15000 \
-      log_interval=1000 \
-      save_interval=15000 \
-      agent.batch_size=256 \
-      agent.encoder=impala_small \
-      agent.low_actor_rep_grad=True \
-      agent.p_aug=0.5 \
-      agent.subgoal_steps=10 \
-      observation=visual \
-      save_dir="$SAVE_DIR" \
-      save_goal=True \
-      save_goal_path="${GOAL_DIR}/LiftBarrier-rf_Agent0_150_Temperal.pkl"
+  # python policy/OGCRL/train.py \
+  #     --config-name=robot_gc_test_train.yaml \
+  #     task.name=LiftBarrier-rf \
+  #     task.dataset.zarr_path="${DATA_ZARR}LiftBarrier-rf_Agent0_150.zarr" \
+  #     task.dataset.normalize_actions=true \
+  #     training.debug=False \
+  #     training.seed=100 \
+  #     training.device=cuda:3 \
+  #     exp_name=LiftBarrier-rf-robot_gc-train \
+  #     logging.mode=online \
+  #     env_name=robofactory \
+  #     agent=hiql \
+  #     agent.high_alpha=3.0 \
+  #     agent.low_alpha=3.0 \
+  #     train_steps=15000 \
+  #     log_interval=1000 \
+  #     save_interval=15000 \
+  #     agent.batch_size=256 \
+  #     agent.encoder=impala_small \
+  #     agent.low_actor_rep_grad=True \
+  #     agent.p_aug=0.5 \
+  #     agent.subgoal_steps=10 \
+  #     observation=visual \
+  #     save_dir="$SAVE_DIR" \
+  #     save_goal=True \
+  #     save_goal_path="${GOAL_DIR}/LiftBarrier-rf_Agent0_150_Temperal.pkl"
 
 
-  python policy/OGCRL/train.py \
-      --config-name=robot_gc_test_train.yaml \
-      task.name=LiftBarrier-rf \
-      task.dataset.zarr_path="${DATA_ZARR}LiftBarrier-rf_Agent1_150.zarr" \
-      task.dataset.normalize_actions=true \
-      training.debug=False \
-      training.seed=100 \
-      training.device=cuda:4 \
-      exp_name=LiftBarrier-rf-robot_gc-train \
-      logging.mode=online \
-      env_name=robofactory \
-      agent=hiql \
-      agent.high_alpha=3.0 \
-      agent.low_alpha=3.0 \
-      train_steps=15000 \
-      log_interval=1000 \
-      save_interval=15000 \
-      agent.batch_size=256 \
-      agent.encoder=impala_small \
-      agent.low_actor_rep_grad=True \
-      agent.p_aug=0.5 \
-      agent.subgoal_steps=10 \
-      observation=visual \
-      save_dir="$SAVE_DIR" \
-      save_goal=True \
-      save_goal_path="${GOAL_DIR}/LiftBarrier-rf_Agent1_150_Temperal.pkl"
+  # python policy/OGCRL/train.py \
+  #     --config-name=robot_gc_test_train.yaml \
+  #     task.name=LiftBarrier-rf \
+  #     task.dataset.zarr_path="${DATA_ZARR}LiftBarrier-rf_Agent1_150.zarr" \
+  #     task.dataset.normalize_actions=true \
+  #     training.debug=False \
+  #     training.seed=100 \
+  #     training.device=cuda:3 \
+  #     exp_name=LiftBarrier-rf-robot_gc-train \
+  #     logging.mode=online \
+  #     env_name=robofactory \
+  #     agent=hiql \
+  #     agent.high_alpha=3.0 \
+  #     agent.low_alpha=3.0 \
+  #     train_steps=15000 \
+  #     log_interval=1000 \
+  #     save_interval=15000 \
+  #     agent.batch_size=256 \
+  #     agent.encoder=impala_small \
+  #     agent.low_actor_rep_grad=True \
+  #     agent.p_aug=0.5 \
+  #     agent.subgoal_steps=10 \
+  #     observation=visual \
+  #     save_dir="$SAVE_DIR" \
+  #     save_goal=True \
+  #     save_goal_path="${GOAL_DIR}/LiftBarrier-rf_Agent1_150_Temperal.pkl"
 
   echo "====== 完成实验 ID: $EXP_ID ======"
   bash ./policy/OGCRL/eval_multi.sh configs/table/lift_barrier.yaml 150  1 LiftBarrier-rf policy/OGCRL/ogcrl/config/agent/hiql.yaml "$SAVE_DIR/MANGOBench/hiql" 15000 "$GOAL_DIR" visual 3.0 3.0  impala_small True 0.5 10 None hiql "$EXP_ID"

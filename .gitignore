@@ -4,6 +4,7 @@ robofactory/assets/
 *.egg-info/
 __pycache__/
 # 实验记录
+robofactory/eval_gc_video
 *.mp4        # 忽略所有 .mp4 文件
 wandb/
 output/
